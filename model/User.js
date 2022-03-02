@@ -21,13 +21,16 @@ const userSchema = new Schema({
             },
         },
     },
-    thoughts: {
-        type: String,
+    // thoughts: {
+    //     type: String,
+    // },
+    // friends: {
+    //     type: String,
+    // },
+});
 
-    },
-    friends: {
-        type: String,
-    },
+userSchema.virtual('friendCount').get(function () {
+    return this.friends.length;
 });
 
 const User = model('User', userSchema);
