@@ -19,4 +19,14 @@ module.exports = {
             res.json(e);
         }
     },
+
+    getAllUsers: async (req, res) => {
+        try {
+            const users = await User.find();
+            res.json(users);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
 };
