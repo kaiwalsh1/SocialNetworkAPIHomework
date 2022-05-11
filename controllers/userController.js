@@ -39,4 +39,13 @@ module.exports = {
         }
     },
 
+    updateUserById: async (req, res) => {
+        const { userId } = req.params;
+        try {
+            
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
 };
