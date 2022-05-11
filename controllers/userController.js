@@ -29,4 +29,14 @@ module.exports = {
         }
     },
 
+    getUserById: async (req, res) => {
+        const { userId } = req.params;
+        try {
+            const user = await User.findById(userId);
+            res.json(user);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
 };
