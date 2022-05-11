@@ -47,9 +47,20 @@ module.exports = {
                 {...req.body},
                 {
                     new: true,
+                    runValidators: true,
                 }
             );
         res.json(updatedUser);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
+    deleteUserById: async (req, res) => {
+        const { userId } = req.params;
+        try {
+            const deletedUser = await User.findByIdAndDelete(userId);
+            res.json(deletedUser);
         } catch (e) {
             res.json(e);
         }
