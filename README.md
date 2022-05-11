@@ -31,7 +31,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 - [Questions](#Questions)
 
 ## Installation
-
+You will need to install Express.js and Mongoose packages, as well as validator. 
 
 ## Usage
 This application uses Express.js, MongoDB, and Mongoose ODM. 
@@ -101,6 +101,6 @@ Built an API for a social network web application where users can share their th
 
 
 ## Questions
-GitHub: kaiwalsh1
+GitHub: (kaiwalsh1)[https://github.com/kaiwalsh1]
 Contact Me: kai@kaiconsulting.co
     
