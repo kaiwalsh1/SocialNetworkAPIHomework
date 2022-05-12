@@ -2,12 +2,12 @@ const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
 const thoughtSchema = new Schema({
-    // userId: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: 'User',
-    //     }
-    // ],
+    userId: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User',
+        }
+    ],
     thoughtText: {
         type: String,
         required: true,
