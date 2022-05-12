@@ -3,14 +3,9 @@ const { Thought, User } = require('../model');
 
 module.exports = {
     createThought: async (req, res) => {
-        const { 
-            userId, 
-            thoughtText, 
-            createdAt, 
-            username } = req.body;
+        const { thoughtText, createdAt, username } = req.body;
         try {
             const newThought = await Thought.create({
-                userId,
                 thoughtText,
                 createdAt,
                 username
@@ -52,6 +47,16 @@ module.exports = {
                 }
             );
             res.json(updatedThought);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
+    deleteThoughtById: async (req, res) => {
+        const { thoughtId } = req.params;
+        try {
+            const deletedThought = await Thought.findByIdAndDelete(thoughtId);
+            res.json(deletedThought);
         } catch (e) {
             res.json(e);
         }

@@ -2,12 +2,6 @@ const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
 const thoughtSchema = new Schema({
-    userId: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
-        }
-    ],
     thoughtText: {
         type: String,
         required: true,
@@ -26,9 +20,6 @@ const thoughtSchema = new Schema({
         required: true,
     },
     // reactions: [reactionSchema],
-    
-    // an array of nested documents created with the reactionSchema
-    // these are like replies
 },
 {
     toJSON: {
