@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {
-    User, Reaction, Thought
+    User, Thought
 } = require('./model');
 
 const seedDb = async () => {

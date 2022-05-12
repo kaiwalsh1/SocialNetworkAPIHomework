@@ -1,11 +1,16 @@
 const moment = require('moment');
-const { Thought } = require('../model');
+const { Thought, User } = require('../model');
 
 module.exports = {
     createThought: async (req, res) => {
-        const { thoughtText, createdAt, username } = req.body;
+        const { 
+            // userId, 
+            thoughtText, 
+            createdAt, 
+            username } = req.body;
         try {
             const newThought = await Thought.create({
+                // userId,
                 thoughtText,
                 createdAt,
                 username
