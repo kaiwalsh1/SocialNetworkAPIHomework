@@ -20,6 +20,7 @@
   "homepage": "https://github.com/kaiwalsh1/SocialNetworkAPIHomework#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "moment": "^2.29.3",
     "mongoose": "^6.2.4",
     "validator": "^13.7.0"
   }

@@ -22,17 +22,28 @@ const userSchema = new Schema({
             },
         },
     },
-    // thoughts: {
-    //     type: String,
-    // },
-    // friends: {
-    //     type: String,
-    // },
+    thoughts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Thought',
+        }
+    ],
+    friends: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User',
+        }
+    ],
+},
+{
+    toJSON: {
+        virtuals: true,
+    },
 });
 
-// userSchema.virtual('friendCount').get(function () {
-//     return this.friends.length;
-// });
+userSchema.virtual('friendCount').get(function () {
+    return this.friends.length;
+});
 
 const User = model('User', userSchema);
 

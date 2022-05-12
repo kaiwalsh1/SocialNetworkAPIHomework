@@ -6,8 +6,9 @@ const {
 const seedDb = async () => {
     await mongoose.connect('mongodb://localhost:27017/socialNetworkDB');
     await User.deleteMany({});
+    await Thought.deleteMany({});
     // await Reaction.deleteMany({});
-    // await Thought.deleteMany({});
+    
 
     process.exit(0);
 };

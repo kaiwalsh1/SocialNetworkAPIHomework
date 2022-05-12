@@ -31,7 +31,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 - [Questions](#Questions)
 
 ## Installation
-You will need to install Express.js and Mongoose packages, as well as validator. 
+You will need to install Express.js, Mongoose, Validator, and moment packages.
 
 ## Usage
 This application uses Express.js, MongoDB, and Mongoose ODM. 
