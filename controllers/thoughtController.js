@@ -4,13 +4,13 @@ const { Thought, User } = require('../model');
 module.exports = {
     createThought: async (req, res) => {
         const { 
-            // userId, 
+            userId, 
             thoughtText, 
             createdAt, 
             username } = req.body;
         try {
             const newThought = await Thought.create({
-                // userId,
+                userId,
                 thoughtText,
                 createdAt,
                 username
