@@ -43,7 +43,6 @@ module.exports = {
                 {...req.body},
                 {
                     new: true,
-                    runValidators: true,
                 }
             );
             res.json(updatedThought);
