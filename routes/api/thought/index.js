@@ -5,7 +5,7 @@ router.route('/')
     .post(createThought)
     .get(getAllThoughts);
 
-router.route('/:userId')
+router.route('/:thoughtId')
     .get(getThoughtById);
 
 module.exports = router;
