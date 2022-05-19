@@ -19,7 +19,7 @@ const thoughtSchema = new Schema({
         type: String,
         required: true,
     },
-    // reactions: [reactionSchema],
+    reactions: [reactionSchema],
 },
 {
     toJSON: {
@@ -31,30 +31,32 @@ const thoughtSchema = new Schema({
 
 
 
-// const reactionSchema = new Schema({
-//     reactionId: {
-//         // Use mongoose's objectId data type
-//         // default value is set to a new objectId
-//     },
-//     reactionBody: {
-//         type: String,
-//         required: true,
-//         maxLength: 280,
-//     },
-//     username: {
-//         type: String,
-//         required: true,
-//     },
-//     createdAt: {
-//         // date
-//         // set default value to the current time stamp
-//         // use a getter method to format the timestamp on query
-//     },
-// });
+const reactionSchema = new Schema({
+    reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId(),
+    },
+    reactionBody: {
+        type: String,
+        required: true,
+        maxLength: 280,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (createdAtValue) => {
+            return moment(createdAtValue).format('MM/DD/YYYY hh:mm a');
+        }
+    },
+});
 
-// thoughtSchema.virtual('reactionCount').get(function () {
-//     return this.reactions.length;
-// });
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
 
 const Thought = model('Thought', thoughtSchema);
 
