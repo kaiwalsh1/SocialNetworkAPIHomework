@@ -66,4 +66,42 @@ module.exports = {
         }
     },
 
+    addFriendToUserById: async (req, res) => {
+        const { userId, friendId } = req.params;
+        try {
+            const updatedUser = await User.findByIdAndUpdate(userId,
+                {
+                    $push: {
+                        friends: friendId,
+                    },
+                },
+                {
+                    new: true,
+                }
+            );
+            res.json(updatedUser);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
+    deleteFriendOfUserById: async (req, res) => {
+        const { userId, friendId } = req.params;
+        try {
+            const updatedUser = await User.findByIdAndUpdate(userId,
+                {
+                    $pull: {
+                        friends: friendId,
+                    },
+                },
+                {
+                    new: true,
+                }
+            );
+            res.json(updatedUser);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
 };
