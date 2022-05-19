@@ -27,7 +27,7 @@ Demonstration of how GET, POST, UPDATE, and DELETE users, thoughts, and reaction
 
 ### Walkthrough Video
 Here is a video example
-(Walkthrough Video)[./assets/socialNetworkAPI.gif]
+!(Walkthrough Video)[./assets/socialNetworkAPI.gif]
 
 ## Credits
 Used course videos and help from CJ Sanders
