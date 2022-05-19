@@ -86,7 +86,6 @@ module.exports = {
 
     deleteReactionFromThoughtById: async (req, res) => {
         const { thoughtId, reactionId } = req.params;
-        console.log(thoughtId, reactionId);
         try {
             const updatedThought = await Thought.findByIdAndUpdate(thoughtId,
                 {
@@ -101,7 +100,6 @@ module.exports = {
                 }
             );
             res.json(updatedThought);
-            console.log(updatedThought);
         } catch (e) {
             res.json(e);
         }
