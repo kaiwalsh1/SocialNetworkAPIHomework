@@ -71,7 +71,28 @@ module.exports = {
                         reactions: {
                             reactionBody,
                             username
-                        }
+                        },
+                    },
+                },
+                {
+                    new: true,
+                }
+            );
+            res.json(updatedThought);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
+    deleteReactionFromThoughtById: async (req, res) => {
+        const { thoughtId, reactionId } = req.params;
+        try {
+            const updatedThought = await Thought.findByIdAndUpdate(thoughtId,
+                {
+                    $pull: {
+                        reactions: {
+                            reactionId,
+                        },
                     },
                 },
                 {
