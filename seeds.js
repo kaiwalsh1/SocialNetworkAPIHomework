@@ -31,6 +31,10 @@ const seedDb = async () => {
             username: faker.internet.userName(),
             email: faker.internet.email(),
         },
+        {
+            username: faker.internet.userName(),
+            email: faker.internet.email(),
+        },
     ];
 
     const users = await User.insertMany(usersToCreate);
