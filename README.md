@@ -1,9 +1,11 @@
 ## Social Network API
-
 By: Kai Walsh
 
 ## Description
 Built an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list.
+
+## Walkthrough Video
+(Walkthrough Video)[]
 
 ## User Story
 AS A social media startup
@@ -25,9 +27,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Credits](#Credits)
-
-- [Contributing](#Contributing)
-- [Tests](#Tests)
 - [Questions](#Questions)
 
 ## Installation
@@ -38,66 +37,7 @@ This application uses Express.js, MongoDB, and Mongoose ODM.
 ***(date library of our choice)***
 
 ## Credits
-
-Your homework is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the Express.js and Mongoose packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps.
-No seed data is provided, so you’ll need to create your own data using Insomnia after you’ve created your API.
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
-
-
-
-
----
-
-## Features
-
-
-## How to Contribute
-
-
-## Tests
-
-
-## Questions
-GitHub: kaiwalsh1
-Contact Me: kai@kaiconsulting.co
-    
-## Social Network API
-
-
-By: Kai Walsh
-
-## Description
-Built an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list.
-
-## Table of Contents
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Credits](#Credits)
-
-- [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
-
-## Installation
-
-
-## Usage
-
-
-## Credits
-
-
-
-
----
-
-## Features
-
-
-## How to Contribute
-
-
-## Tests
+Used course videos and help from CJ Sanders
 
 
 ## Questions

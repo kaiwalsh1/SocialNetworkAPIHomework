@@ -36,6 +36,54 @@ const seedDb = async () => {
     const users = await User.insertMany(usersToCreate);
     console.log(users);
 
+    const thoughtsToCreate = [
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+        {
+            thoughtText: faker.lorem.sentence(),
+            createdAt: faker.date.past(),
+            username: users[Math.floor(Math.random() * users.length)].username,
+        },
+    ];
+
+    const thoughts = await Thought.insertMany(thoughtsToCreate);
+    console.log(thoughts);
+
+    console.log('Database seeded');
+
     process.exit(0);
 };
 
