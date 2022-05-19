@@ -61,4 +61,27 @@ module.exports = {
         }
     },
 
+    addReactionToThoughtById: async (req, res) => {
+        const { thoughtId } = req.params;
+        const { reactionBody, username } = req.body;
+        try {
+            const updatedThought = await Thought.findByIdAndUpdate(thoughtId,
+                {
+                    $push: {
+                        reactions: {
+                            reactionBody,
+                            username
+                        }
+                    },
+                },
+                {
+                    new: true,
+                }
+            );
+            res.json(updatedThought);
+        } catch (e) {
+            res.json(e);
+        }
+    },
+
 };
