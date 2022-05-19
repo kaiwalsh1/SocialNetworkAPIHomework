@@ -27,7 +27,7 @@ Demonstration of how GET, POST, UPDATE, and DELETE users, thoughts, and reaction
 
 ### Walkthrough Video
 Link to walkthough video:
-![]https://drive.google.com/file/d/1agb3ys3rkOnQteLp-N08KFds_qGEtdcT/view
+https://drive.google.com/file/d/1agb3ys3rkOnQteLp-N08KFds_qGEtdcT/view
 
 Here is a video example
 
